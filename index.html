@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -6,175 +7,352 @@
 <title>Takayuki | Infrastructure Engineer</title>
 
 <style>
+:root{
+    --bg:#f8f9fb;
+    --card:#ffffff;
+    --text:#1d1d1f;
+    --sub:#6e6e73;
+    --border:#e5e7eb;
+    --accent:#3b82f6;
+}
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-    background:#f5f6f8;
-    color:#333;
+    background:var(--bg);
+    color:var(--text);
     line-height:1.8;
 }
 
 .container{
-    max-width:900px;
-    margin:0 auto;
-    padding:40px 20px;
+    width:min(1100px,92%);
+    margin:auto;
 }
 
-header{
-    text-align:center;
-    padding:80px 20px;
+.hero{
+    min-height:80vh;
+    display:flex;
+    align-items:center;
 }
 
-header h1{
-    font-size:3rem;
-    color:#222;
+.hero h1{
+    font-size:clamp(3rem,8vw,5rem);
+    font-weight:700;
     margin-bottom:10px;
 }
 
-header p{
-    color:#666;
+.hero .subtitle{
+    font-size:1.4rem;
+    color:var(--sub);
+    margin-bottom:20px;
+}
+
+.hero .lead{
+    max-width:700px;
+    color:var(--sub);
     font-size:1.1rem;
 }
 
+.nav{
+    position:sticky;
+    top:0;
+    background:rgba(255,255,255,.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+    z-index:100;
+}
+
+.nav-inner{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:16px;
+}
+
+.nav a{
+    text-decoration:none;
+    color:var(--sub);
+}
+
+.nav a:hover{
+    color:var(--text);
+}
+
+section{
+    margin-bottom:90px;
+}
+
+.section-title{
+    font-size:2rem;
+    margin-bottom:30px;
+}
+
 .card{
-    background:#fff;
-    border-radius:16px;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:24px;
     padding:30px;
+    box-shadow:0 10px 40px rgba(0,0,0,.04);
+}
+
+.grid{
+    display:grid;
+    gap:24px;
+}
+
+.grid-2{
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+}
+
+.tag{
+    display:inline-block;
+    padding:8px 14px;
+    margin:6px;
+    border-radius:999px;
+    background:#f1f5f9;
+    font-size:.9rem;
+}
+
+.timeline{
+    border-left:2px solid var(--border);
+    padding-left:24px;
+}
+
+.timeline-item{
+    margin-bottom:30px;
+}
+
+.timeline-year{
+    color:var(--accent);
+    font-weight:bold;
+}
+
+.project{
     margin-bottom:24px;
-    box-shadow:0 4px 20px rgba(0,0,0,0.05);
 }
 
-h2{
-    margin-bottom:16px;
-    color:#222;
-    border-bottom:2px solid #ececec;
-    padding-bottom:8px;
-}
-
-ul{
-    padding-left:20px;
+.project h3{
+    margin-bottom:10px;
 }
 
 footer{
     text-align:center;
-    color:#777;
-    margin-top:40px;
-    padding:20px;
+    color:var(--sub);
+    padding:60px 0;
 }
 
-.skill{
-    display:inline-block;
-    background:#f1f3f5;
-    padding:8px 14px;
-    border-radius:20px;
-    margin:5px;
-    font-size:0.9rem;
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
 }
 
-a{
-    color:#444;
-    text-decoration:none;
+.stat{
+    text-align:center;
+    padding:25px;
 }
 
-a:hover{
-    text-decoration:underline;
+.stat-number{
+    font-size:2rem;
+    font-weight:bold;
 }
+
+.stat-label{
+    color:var(--sub);
+}
+
 </style>
+
 </head>
 
 <body>
 
+<nav class="nav">
+<div class="nav-inner">
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#career">Career</a>
+<a href="#projects">Projects</a>
+<a href="#learning">Learning</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
 <div class="container">
 
-<header>
-    <h1>Takayuki</h1>
-    <p>Infrastructure Engineer</p>
-</header>
+<section class="hero">
+<div>
+<h1>Takayuki</h1>
+<p class="subtitle">Infrastructure Engineer</p>
 
-<section class="card">
-    <h2>About</h2>
-    <p>
-        埼玉県在住。
-        インフラエンジニアとしてサーバ・仮想基盤・クラウド環境の
-        設計、構築、運用に従事しています。
-    </p>
-
-    <p>
-        安定したシステム運用と継続的な改善を重視し、
-        日々技術力向上に取り組んでいます。
-    </p>
+<p class="lead">
+安定したシステム運用と継続的な改善を重視する
+インフラエンジニア。
+サーバ、仮想基盤、クラウド環境の運用・設計・構築を中心に、
+より信頼性の高いITサービスの実現を目指しています。
+</p>
+</div>
 </section>
 
-<section class="card">
-    <h2>Career</h2>
+<section id="about">
+<h2 class="section-title">About</h2>
 
-    <p>
-        ITインフラ領域を中心に経験を積み、
-        オンプレミス環境からクラウド環境まで幅広く担当。
-    </p>
+<div class="card">
+<p>
+埼玉県在住。ITインフラ領域でキャリアを積み、
+Windows Server、Linux、VMware、AWSを中心とした
+運用・改善業務に従事しています。
+</p>
 
-    <ul>
-        <li>Windows Server運用・構築</li>
-        <li>Linuxサーバ運用</li>
-        <li>VMware仮想基盤運用</li>
-        <li>AWS環境運用</li>
-        <li>障害対応・運用改善</li>
-        <li>手順書・運用ドキュメント整備</li>
-    </ul>
+<br>
+
+<p>
+技術だけでなく、運用品質の向上やドキュメント整備、
+チーム内ナレッジ共有を重視しています。
+</p>
+</div>
 </section>
 
-<section class="card">
-    <h2>Skills</h2>
+<section>
+<div class="stats">
+<div class="card stat">
+<div class="stat-number">10+</div>
+<div class="stat-label">Years in IT</div>
+</div>
 
-    <span class="skill">Windows Server</span>
-    <span class="skill">Linux</span>
-    <span class="skill">VMware</span>
-    <span class="skill">AWS</span>
-    <span class="skill">Active Directory</span>
-    <span class="skill">PowerShell</span>
-    <span class="skill">Python</span>
-    <span class="skill">Network</span>
+<div class="card stat">
+<div class="stat-number">400+</div>
+<div class="stat-label">AP Study Questions</div>
+</div>
+
+<div class="card stat">
+<div class="stat-number">24/7</div>
+<div class="stat-label">Operations Mindset</div>
+</div>
+</div>
 </section>
 
-<section class="card">
-    <h2>Certifications</h2>
+<section id="skills">
+<h2 class="section-title">Skills</h2>
 
-    <ul>
-        <li>基本情報技術者</li>
-        <li>応用情報技術者（学習中）</li>
-    </ul>
+<div class="card">
+
+<span class="tag">Windows Server</span> <span class="tag">Linux</span> <span class="tag">VMware</span> <span class="tag">AWS</span> <span class="tag">Active Directory</span> <span class="tag">PowerShell</span> <span class="tag">Python</span> <span class="tag">TCP/IP</span> <span class="tag">DNS</span> <span class="tag">DHCP</span> <span class="tag">ITIL</span> <span class="tag">Monitoring</span>
+
+</div>
 </section>
 
-<section class="card">
-    <h2>Interests</h2>
+<section id="career">
+<h2 class="section-title">Career Timeline</h2>
 
-    <ul>
-        <li>クラウド・仮想化技術</li>
-        <li>ITサービスマネジメント</li>
-        <li>自動化・効率化</li>
-        <li>資産形成（NISA・長期投資）</li>
-        <li>子育てとテクノロジー</li>
-    </ul>
+<div class="card timeline">
+
+<div class="timeline-item">
+<div class="timeline-year">2026</div>
+応用情報技術者試験合格を目指して学習継続中
+</div>
+
+<div class="timeline-item">
+<div class="timeline-year">2024</div>
+住宅購入・子育てとキャリアの両立に取り組む
+</div>
+
+<div class="timeline-item">
+<div class="timeline-year">2023</div>
+第一子誕生
+</div>
+
+<div class="timeline-item">
+<div class="timeline-year">2020 - Present</div>
+インフラ設計・運用・改善業務を担当
+</div>
+
+<div class="timeline-item">
+<div class="timeline-year">2015</div>
+IT業界でキャリアスタート
+</div>
+
+</div>
 </section>
 
-<section class="card">
-    <h2>Contact</h2>
+<section id="projects">
+<h2 class="section-title">Projects & Achievements</h2>
 
-    <p>
-        GitHub:
-        <a href="https://github.com/matsu-taka0120" target="_blank">
-            github.com/matsu-taka0120
-        </a>
-    </p>
+<div class="grid grid-2">
+
+<div class="card project">
+<h3>運用手順標準化</h3>
+<p>
+属人化していた運用手順を整理し、
+ドキュメント整備を推進。
+運用品質向上に貢献。
+</p>
+</div>
+
+<div class="card project">
+<h3>仮想基盤運用</h3>
+<p>
+VMware環境の運用・保守を担当。
+安定稼働を重視した管理を実施。
+</p>
+</div>
+
+<div class="card project">
+<h3>障害対応改善</h3>
+<p>
+インシデント対応プロセス改善や
+ナレッジ共有に取り組む。
+</p>
+</div>
+
+<div class="card project">
+<h3>クラウド活用</h3>
+<p>
+AWSサービスの運用を通じ、
+クラウド技術の知見を拡大。
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="learning">
+<h2 class="section-title">Learning Journal</h2>
+
+<div class="card">
+<ul>
+<li>応用情報技術者試験学習継続中</li>
+<li>午前問題400問以上演習</li>
+<li>生成AI活用による業務効率化研究</li>
+<li>クラウド・仮想化技術の継続学習</li>
+</ul>
+</div>
+</section>
+
+<section id="contact">
+<h2 class="section-title">Contact</h2>
+
+<div class="card">
+<p>
+GitHub<br>
+<a href="https://github.com/matsu-taka0120">
+github.com/matsu-taka0120
+</a>
+</p>
+</div>
 </section>
 
 <footer>
-    © 2026 Takayuki
+© 2026 Takayuki | Infrastructure Engineer
 </footer>
 
 </div>
