@@ -3,94 +3,163 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Takayuki | Infrastructure Engineer</title>
 
 <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
-  margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  background:#f5f6f8;
-  color:#1d1d1f;
-  line-height:1.7;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    background:#f5f6f8;
+    color:#1d1d1f;
+    line-height:1.8;
 }
+
 .container{
-  max-width:1000px;
-  margin:auto;
-  padding:20px;
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
 }
+
+nav{
+    display:flex;
+    justify-content:flex-end;
+    gap:25px;
+    padding:20px 0;
+}
+
+nav a{
+    text-decoration:none;
+    color:#666;
+    font-weight:500;
+}
+
+nav a:hover{
+    color:#2563eb;
+}
+
 .hero{
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  gap:40px;
-  min-height:80vh;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:50px;
+    min-height:70vh;
 }
+
 .avatar{
-  width:220px;
-  height:220px;
-  border-radius:50%;
-  object-fit:cover;
-  box-shadow:0 10px 30px rgba(0,0,0,.1);
+    width:240px;
+    height:240px;
+    border-radius:50%;
+    object-fit:cover;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
+
 .hero-text{
-  flex:1;
+    flex:1;
 }
+
 .badge{
-  display:inline-block;
-  background:#e8f0ff;
-  color:#2563eb;
-  padding:8px 14px;
-  border-radius:999px;
-  font-size:.9rem;
+    display:inline-block;
+    background:#e8f0ff;
+    color:#2563eb;
+    padding:8px 14px;
+    border-radius:999px;
+    font-size:.9rem;
 }
+
 h1{
-  font-size:4rem;
-  margin:10px 0;
+    font-size:4rem;
+    margin:15px 0;
 }
+
 .lead{
-  color:#666;
+    color:#666;
+    font-size:1.05rem;
 }
+
 .card{
-  background:#fff;
-  border-radius:20px;
-  padding:25px;
-  margin:20px 0;
-  box-shadow:0 4px 15px rgba(0,0,0,.05);
+    background:white;
+    border-radius:24px;
+    padding:30px;
+    margin:25px 0;
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
 }
+
 h2{
-  margin-top:0;
+    margin-bottom:15px;
 }
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+}
+
 .tags span{
-  display:inline-block;
-  background:#f1f3f5;
-  padding:8px 12px;
-  margin:5px;
-  border-radius:999px;
-  font-size:.9rem;
+    background:#f1f3f5;
+    padding:8px 12px;
+    border-radius:999px;
+    margin:5px;
 }
+
 .grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
+
+.blog-card{
+    border:1px solid #eee;
+    border-radius:16px;
+    padding:20px;
+    transition:.2s;
+}
+
+.blog-card:hover{
+    transform:translateY(-3px);
+}
+
+.blog-card a{
+    text-decoration:none;
+    color:#1d1d1f;
+}
+
+.blog-card h3{
+    margin-bottom:10px;
+}
+
 footer{
-  text-align:center;
-  color:#777;
-  padding:40px 0;
+    text-align:center;
+    padding:40px 0;
+    color:#888;
 }
+
 a{
-  color:#2563eb;
-  text-decoration:none;
+    color:#2563eb;
 }
+
 @media(max-width:768px){
-  .hero{
+
+.hero{
     text-align:center;
     justify-content:center;
-  }
-  h1{
-    font-size:2.5rem;
-  }
 }
+
+h1{
+    font-size:2.5rem;
+}
+
+nav{
+    justify-content:center;
+}
+
+}
+
 </style>
 </head>
 
@@ -98,33 +167,48 @@ a{
 
 <div class="container">
 
+<nav>
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
+</nav>
+
 <section class="hero">
 
 <img src="avatar.png" class="avatar" alt="avatar">
 
 <div class="hero-text">
-<span class="badge">Infrastructure Engineer</span>
+
+<span class="badge">
+Infrastructure Engineer
+</span>
 
 <h1>Takayuki</h1>
 
 <p class="lead">
-サーバ、ネットワーク、仮想基盤、クラウド環境の運用設計を中心に取り組むインフラエンジニア。
+サーバ、ネットワーク、仮想基盤、クラウド環境を中心に、
+運用設計・改善活動に取り組むインフラエンジニア。
 安定したサービス提供と継続的な改善を重視しています。
 </p>
+
 </div>
 
 </section>
 
 <section class="card">
+
 <h2>About</h2>
+
 <p>
-ITインフラ領域を中心に、運用設計、運用改善業務に従事。
-技術だけでなく、運用標準化やドキュメント整備、
-ナレッジ共有など継続的な改善活動を大切にしています。
+ITインフラ領域において運用設計、運用改善、
+標準化活動を中心に従事しています。
+技術だけでなく、ドキュメント整備やナレッジ共有、
+継続的な業務改善を大切にしています。
 </p>
+
 </section>
 
 <section class="card">
+
 <h2>Technical Skills</h2>
 
 <div class="tags">
@@ -145,18 +229,19 @@ ITインフラ領域を中心に、運用設計、運用改善業務に従事。
 </section>
 
 <section class="card">
+
 <h2>Professional Focus</h2>
 
 <div class="grid">
 
 <div>
 <h3>Infrastructure Operations</h3>
-<p>安定稼働を重視した運用・保守業務。</p>
+<p>安定稼働を重視した運用・保守。</p>
 </div>
 
 <div>
 <h3>Continuous Improvement</h3>
-<p>運用品質向上と標準化の推進。</p>
+<p>標準化や品質向上の推進。</p>
 </div>
 
 <div>
@@ -166,7 +251,7 @@ ITインフラ領域を中心に、運用設計、運用改善業務に従事。
 
 <div>
 <h3>Automation</h3>
-<p>PowerShellやスクリプトによる効率化。</p>
+<p>PowerShellやPythonによる効率化。</p>
 </div>
 
 </div>
@@ -174,6 +259,7 @@ ITインフラ領域を中心に、運用設計、運用改善業務に従事。
 </section>
 
 <section class="card">
+
 <h2>Projects & Achievements</h2>
 
 <ul>
@@ -186,6 +272,36 @@ ITインフラ領域を中心に、運用設計、運用改善業務に従事。
 </section>
 
 <section class="card">
+
+<h2>Latest Blog Posts</h2>
+
+<div class="blog-card">
+
+<a href="/blog/first-post.html">
+
+<h3>
+GitHub Pagesで独自ドメインを設定した話
+</h3>
+
+<p>
+GitHub PagesとCloudflareを利用して、
+独自ドメインを構築した際の手順と学びをまとめました。
+</p>
+
+</a>
+
+</div>
+
+<p style="margin-top:20px;">
+<a href="/blog/">
+→ Blog一覧を見る
+</a>
+</p>
+
+</section>
+
+<section class="card">
+
 <h2>Areas of Interest</h2>
 
 <ul>
@@ -200,12 +316,20 @@ ITインフラ領域を中心に、運用設計、運用改善業務に従事。
 </section>
 
 <section class="card">
+
 <h2>Contact</h2>
 
 <p>
-Coming soon<br>
-<a href="https://yahoo.co.jp" target="_blank">
-Coming soon
+GitHub<br>
+<a href="https://github.com/matsu-taka0120" target="_blank">
+github.com/matsu-taka0120
+</a>
+</p>
+
+<p style="margin-top:15px;">
+Blog<br>
+<a href="/blog/">
+matsu-taka.com/blog
 </a>
 </p>
 
