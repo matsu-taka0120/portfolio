@@ -1,18 +1,194 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>Blog | Taka Matsu</title>
-</head>
-<body>
-  <h1>Blog</h1>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <ul>
-    <li>
-      <a href="first-post.html">
+<title>Blog | Taka Matsu</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:#f7f8fa;
+  color:#333;
+  line-height:1.8;
+}
+
+header{
+  background:white;
+  padding:80px 20px;
+  text-align:center;
+  border-bottom:1px solid #eee;
+}
+
+header h1{
+  font-size:3rem;
+  margin-bottom:15px;
+}
+
+header p{
+  color:#777;
+  font-size:1rem;
+}
+
+.container{
+  max-width:1000px;
+  margin:50px auto;
+  padding:0 20px;
+}
+
+.profile{
+  background:white;
+  border-radius:20px;
+  padding:30px;
+  display:flex;
+  align-items:center;
+  gap:25px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.05);
+  margin-bottom:40px;
+}
+
+.profile img{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.profile h2{
+  margin-bottom:8px;
+}
+
+.profile p{
+  color:#666;
+}
+
+.section-title{
+  font-size:1.8rem;
+  margin-bottom:25px;
+}
+
+.post-grid{
+  display:grid;
+  gap:25px;
+}
+
+.post-card{
+  background:white;
+  border-radius:20px;
+  padding:25px;
+  text-decoration:none;
+  color:inherit;
+  transition:.2s;
+  box-shadow:0 8px 25px rgba(0,0,0,0.05);
+}
+
+.post-card:hover{
+  transform:translateY(-4px);
+}
+
+.post-date{
+  color:#999;
+  font-size:.9rem;
+  margin-bottom:10px;
+}
+
+.post-title{
+  font-size:1.3rem;
+  margin-bottom:10px;
+}
+
+.post-desc{
+  color:#666;
+}
+
+footer{
+  text-align:center;
+  padding:50px 20px;
+  color:#888;
+}
+
+.back-home{
+  display:inline-block;
+  margin-top:40px;
+  color:#555;
+  text-decoration:none;
+}
+
+@media(max-width:768px){
+
+.profile{
+  flex-direction:column;
+  text-align:center;
+}
+
+header h1{
+  font-size:2.2rem;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Tech Blog</h1>
+  <p>Infrastructure / Cloud / Linux / Operations</p>
+</header>
+
+<div class="container">
+
+  <div class="profile">
+    <img src="../avatar.png" alt="avatar">
+
+    <div>
+      <h2>Taka Matsu</h2>
+      <p>
+        インフラエンジニアとしての学びや検証内容、
+        運用改善の知見を記録しています。
+      </p>
+    </div>
+  </div>
+
+  <h2 class="section-title">Latest Posts</h2>
+
+  <div class="post-grid">
+
+    <a class="post-card" href="first-post.html">
+
+      <div class="post-date">
+        2026.06.12
+      </div>
+
+      <div class="post-title">
         GitHub Pagesで独自ドメインを設定した話
-      </a>
-    </li>
-  </ul>
+      </div>
+
+      <div class="post-desc">
+        GitHub PagesとCloudflareを利用して
+        独自ドメインを設定した手順をまとめました。
+      </div>
+
+    </a>
+
+  </div>
+
+  <a class="back-home" href="../">
+    ← Portfolioへ戻る
+  </a>
+
+</div>
+
+<footer>
+  © 2026 Taka Matsu
+</footer>
+
 </body>
 </html>
