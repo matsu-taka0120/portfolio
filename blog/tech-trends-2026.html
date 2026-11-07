@@ -52,6 +52,24 @@ a{
   display:inline-block;
   margin-top:40px;
 }
+
+.article-figure{
+  margin:30px 0;
+}
+
+.article-figure img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:10px;
+}
+
+.article-figure figcaption{
+  font-size:.85em;
+  color:#888;
+  text-align:center;
+  margin-top:8px;
+}
 </style>
 </head>
 
@@ -73,6 +91,11 @@ ITインフラを取り巻く環境は、ここ数年で大きく変化してい
 本記事では、日々の運用設計や改善活動に携わる立場から、
 注目している技術動向を整理します。
 </p>
+
+<figure class="article-figure">
+<img src="images/tech-trends-hero.svg" alt="ダッシュボードやサーバー、クラウドなど運用現場の技術動向を表すイメージ図">
+<figcaption>運用現場を取り巻く技術動向のイメージ</figcaption>
+</figure>
 
 <h2>生成AIが運用業務に入ってきた</h2>
 
@@ -127,6 +150,11 @@ Observabilityの考え方が広がっています。
 運用設計の段階で「どう観測するか」を決めておくことが、
 これまで以上に重要になっています。
 </p>
+
+<figure class="article-figure">
+<img src="images/tech-trends-observability.svg" alt="メトリクスやログなどを横断的に確認する可観測性のイメージ図">
+<figcaption>さまざまなデータを横断して状態を把握するイメージ</figcaption>
+</figure>
 
 <h2>ゼロトラストが前提の設計に</h2>
 
